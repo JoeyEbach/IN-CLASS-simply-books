@@ -14,11 +14,11 @@ function Authors() {
 
   useEffect(() => {
     getAllTheAuthors();
-  });
+  }, []);
 
   return (
     <div>
-      {author.map((authors) => <AuthorCard key={authors.firebaseKey} authorObj={authors} />)}
+      {author.map((authors) => <AuthorCard key={authors.firebaseKey} authorObj={authors} onUpdate={getAllTheAuthors} />)}
     </div>
   );
 }
