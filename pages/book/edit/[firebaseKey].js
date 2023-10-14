@@ -14,6 +14,8 @@ export default function EditBook() {
     getSingleBook(firebaseKey).then(setEditItem);
   }, [firebaseKey]);
 
+  console.warn(router);
+
   // TODO: pass object to form
   return (<BookForm obj={editItem} />);
 }
